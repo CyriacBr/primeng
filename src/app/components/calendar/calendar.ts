@@ -1,5 +1,5 @@
 import {NgModule,Component,ElementRef,OnDestroy,OnInit,Input,Output,EventEmitter,forwardRef,Renderer2,
-        ViewChild,ChangeDetectorRef,TemplateRef,ContentChildren,QueryList,NgZone,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
+        ViewChild,ChangeDetectorRef,TemplateRef,ContentChildren,QueryList,NgZone,ChangeDetectionStrategy, ViewEncapsulation, AfterViewInit} from '@angular/core';
 import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/animations';
 import {CommonModule} from '@angular/common';
 import {ButtonModule} from '@cyriacbr/primeng/button';
@@ -32,7 +32,7 @@ export interface LocaleSettings {
     template:  `
         <span #container [ngClass]="{'p-calendar':true, 'p-calendar-w-btn': showIcon, 'p-calendar-timeonly': timeOnly, 'p-focus': focus}" [ngStyle]="style" [class]="styleClass">
             <ng-template [ngIf]="!inline">
-                <input #inputfield type="text" [attr.id]="inputId" [attr.name]="name" [attr.required]="required" [attr.aria-required]="required" [value]="inputFieldValue" (focus)="onInputFocus($event)" (keydown)="onInputKeydown($event)" (click)="onInputClick()" (blur)="onInputBlur($event)"
+                <input #inputfield type="text" [attr.id]="inputId" [attr.name]="name" [attr.required]="required" [attr.aria-required]="required" [attr.autofocus]="autofocus" [value]="inputFieldValue" (focus)="onInputFocus($event)" (keydown)="onInputKeydown($event)" (click)="onInputClick()" (blur)="onInputBlur($event)"
                     [readonly]="readonlyInput" (input)="onUserInput($event)" [ngStyle]="inputStyle" [class]="inputStyleClass" [placeholder]="placeholder||''" [disabled]="disabled" [attr.tabindex]="tabindex" [attr.inputmode]="touchUI ? 'off' : null"
                     [ngClass]="'p-inputtext p-component'" autocomplete="off" [attr.aria-labelledby]="ariaLabelledBy"
                     ><button type="button" [icon]="icon" pButton pRipple *ngIf="showIcon" (click)="onButtonClick($event,inputfield)" class="p-datepicker-trigger"
@@ -194,7 +194,7 @@ export interface LocaleSettings {
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./calendar.css']
 })
-export class Calendar implements OnInit,OnDestroy,ControlValueAccessor {
+export class Calendar implements OnInit,AfterViewInit,OnDestroy,ControlValueAccessor {
 
     @Input() style: any;
 
@@ -297,6 +297,8 @@ export class Calendar implements OnInit,OnDestroy,ControlValueAccessor {
     @Input() showTransitionOptions: string = '.12s cubic-bezier(0, 0, 0.2, 1)';
 
     @Input() hideTransitionOptions: string = '.1s linear';
+
+    @Input() autofocus: boolean;
 
     @Output() onFocus: EventEmitter<any> = new EventEmitter();
 
@@ -558,7 +560,16 @@ export class Calendar implements OnInit,OnDestroy,ControlValueAccessor {
             this.createMonthPickerValues();
         }
 
+        this.focus = this.autofocus;
         this.initialized = true;
+    }
+
+    ngAfterViewInit() {
+        if (this.autofocus) {
+            setTimeout(() => {
+                this.inputfieldViewChild.nativeElement.focus();
+            }, 0);
+        }
     }
 
     ngAfterContentInit() {
