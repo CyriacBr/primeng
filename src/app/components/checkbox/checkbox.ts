@@ -1,4 +1,4 @@
-import {NgModule,Component,Input,Output,EventEmitter,forwardRef,ChangeDetectorRef,ViewChild,ElementRef,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
+import {NgModule,Component,Input,Output,EventEmitter,forwardRef,ChangeDetectorRef,ViewChild,ElementRef,ChangeDetectionStrategy, ViewEncapsulation, OnInit, AfterViewInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from '@angular/forms';
 
@@ -14,7 +14,7 @@ export const CHECKBOX_VALUE_ACCESSOR: any = {
         <div [ngStyle]="style" [ngClass]="{'p-checkbox p-component': true, 'p-checkbox-checked': checked, 'p-checkbox-disabled': disabled, 'p-checkbox-focused': focused}" [class]="styleClass">
             <div class="p-hidden-accessible">
                 <input #cb type="checkbox" [attr.id]="inputId" [attr.name]="name" [readonly]="readonly" [value]="value" [checked]="checked" (focus)="onFocus()" (blur)="onBlur()"
-                (change)="handleChange($event)" [disabled]="disabled" [attr.tabindex]="tabindex" [attr.aria-labelledby]="ariaLabelledBy" [attr.required]="required">
+                (change)="handleChange($event)" [disabled]="disabled" [attr.tabindex]="tabindex" [attr.aria-labelledby]="ariaLabelledBy" [attr.required]="required" [attr.autofocus]="autofocus">
             </div>
             <div class="p-checkbox-box" (click)="onClick($event,cb,true)"
                         [ngClass]="{'p-highlight': checked, 'p-disabled': disabled, 'p-focus': focused}" role="checkbox" [attr.aria-checked]="checked">
@@ -30,7 +30,7 @@ export const CHECKBOX_VALUE_ACCESSOR: any = {
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./checkbox.css']
 })
-export class Checkbox implements ControlValueAccessor {
+export class Checkbox implements OnInit, AfterViewInit, ControlValueAccessor {
 
     @Input() value: any;
 
@@ -62,7 +62,9 @@ export class Checkbox implements ControlValueAccessor {
 
     @Input() required: boolean;
 
-    @ViewChild('cb') inputViewChild: ElementRef;
+    @Input() autofocus: boolean;
+
+    @ViewChild('cb') inputViewChild: ElementRef<HTMLInputElement>;
 
     @Output() onChange: EventEmitter<any> = new EventEmitter();
     
@@ -77,6 +79,16 @@ export class Checkbox implements ControlValueAccessor {
     checked: boolean = false;
 
     constructor(private cd: ChangeDetectorRef) {}
+
+    ngOnInit() {
+        this.focused = this.autofocus;
+    }
+
+    ngAfterViewInit() {
+        if (this.autofocus) {
+            this.inputViewChild.nativeElement.focus();
+        }
+    }
 
     onClick(event,checkbox,focus:boolean) {
         event.preventDefault();
