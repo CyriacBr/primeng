@@ -19,7 +19,7 @@
             "dom"
         ],
         "paths": {
-            "primeng/*": ["src/app/components/*/public_api"]
+            "@cyriacbr/primeng/*": ["src/app/components/*/public_api"]
         }
      }
     }
