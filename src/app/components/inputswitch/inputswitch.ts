@@ -1,4 +1,4 @@
-import {NgModule,Component,Input,forwardRef,EventEmitter,Output,ChangeDetectorRef,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
+import {NgModule,Component,Input,forwardRef,EventEmitter,Output,ChangeDetectorRef,ChangeDetectionStrategy, ViewEncapsulation, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NG_VALUE_ACCESSOR,ControlValueAccessor} from '@angular/forms';
 
@@ -14,7 +14,7 @@ export const INPUTSWITCH_VALUE_ACCESSOR: any = {
         <div [ngClass]="{'p-inputswitch p-component': true, 'p-inputswitch-checked': checked, 'p-disabled': disabled, 'p-focus': focused}" 
             [ngStyle]="style" [class]="styleClass" (click)="onClick($event, cb)">
             <div class="p-hidden-accessible">
-                <input #cb type="checkbox" [attr.id]="inputId" [attr.name]="name" [attr.tabindex]="tabindex" [checked]="checked" (change)="onInputChange($event)"
+                <input #cb type="checkbox" [attr.id]="inputId" [attr.name]="name" [attr.tabindex]="tabindex" [checked]="checked" (change)="onInputChange($event)" [attr.autofocus]="autofocus"
                     (focus)="onFocus($event)" (blur)="onBlur($event)" [disabled]="disabled" role="switch" [attr.aria-checked]="checked" [attr.aria-labelledby]="ariaLabelledBy"/>
             </div>
             <span class="p-inputswitch-slider"></span>
@@ -25,7 +25,7 @@ export const INPUTSWITCH_VALUE_ACCESSOR: any = {
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./inputswitch.css']
 })
-export class InputSwitch implements ControlValueAccessor {
+export class InputSwitch implements OnInit, AfterViewInit, ControlValueAccessor {
 
     @Input() style: any;
 
@@ -42,8 +42,12 @@ export class InputSwitch implements ControlValueAccessor {
     @Input() readonly: boolean;
 
     @Input() ariaLabelledBy: string;
+
+    @Input() autofocus: boolean;
     
     @Output() onChange: EventEmitter<any> = new EventEmitter();
+
+    @ViewChild('cb') input: ElementRef<HTMLInputElement>;
 
     checked: boolean = false;
 
@@ -54,6 +58,16 @@ export class InputSwitch implements ControlValueAccessor {
     onModelTouched: Function = () => {};
 
     constructor(private cd: ChangeDetectorRef) {}
+
+    ngOnInit() {
+        this.focused = this.autofocus;
+    }
+
+    ngAfterViewInit() {
+        if (this.autofocus) {
+            this.input.nativeElement.focus();
+        }
+    }
 
     onClick(event: Event, cb: HTMLInputElement) {
         if (!this.disabled && !this.readonly) {
