@@ -1,4 +1,4 @@
-import {NgModule,Component,Input,Output,ElementRef,EventEmitter,forwardRef,ViewChild,ChangeDetectorRef,ChangeDetectionStrategy, Injectable, Injector, OnInit, OnDestroy} from '@angular/core';
+import {NgModule,Component,Input,Output,ElementRef,EventEmitter,forwardRef,ViewChild,ChangeDetectorRef,ChangeDetectionStrategy, Injectable, Injector, OnInit, OnDestroy, AfterViewInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, NgControl} from '@angular/forms';
 
@@ -62,7 +62,7 @@ export class RadioControlRegistry {
     providers: [RADIO_VALUE_ACCESSOR],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RadioButton implements ControlValueAccessor, OnInit, OnDestroy {
+export class RadioButton implements ControlValueAccessor, OnInit, OnDestroy, AfterViewInit {
 
     @Input() value: any;
 
@@ -85,6 +85,8 @@ export class RadioButton implements ControlValueAccessor, OnInit, OnDestroy {
     @Input() styleClass: string;
 
     @Input() labelStyleClass: string;
+
+    @Input() autofocus: boolean;
 
     @Output() onClick: EventEmitter<any> = new EventEmitter();
 
@@ -111,6 +113,12 @@ export class RadioButton implements ControlValueAccessor, OnInit, OnDestroy {
             this.control = this.injector.get(NgControl);
             this.checkName();
             this.registry.add(this.control, this);
+        }
+    }
+
+    ngAfterViewInit() {
+        if (this.autofocus) {
+            this.focus();
         }
     }
     
