@@ -1,5 +1,37 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [11.3.0](https://github.com/primefaces/primeng/compare/v1.0.0-beta.20...v11.3.0) (2021-02-23)
+
+
+### Features
+
+* **autocomplete:** add the prop overlayFitWidth ([f5c0e06](https://github.com/primefaces/primeng/commit/f5c0e06ae48c2d22d0ccf2975e27e7d1a9a700fd))
+* **calendar:** add autofocus ([d467e16](https://github.com/primefaces/primeng/commit/d467e16730c6b74a1f3f44f85c44d506589c62a3))
+* **checkbox:** add autofocus ([5ee99b7](https://github.com/primefaces/primeng/commit/5ee99b76e121ec673340a6cf22b893decb80607c))
+* **input-number:** add autofocus ([73a9c22](https://github.com/primefaces/primeng/commit/73a9c2219e6152f6373a25fb35867df1bfa36772))
+* **input-switch:** add autofocus ([52cac13](https://github.com/primefaces/primeng/commit/52cac1362fc2b93a949682998ce36e5b4973f26d))
+* **radio-button:** add autofocus ([86a010b](https://github.com/primefaces/primeng/commit/86a010bea2f15eec17cf1d601c9f2fd0eb74267b))
+
+
+### Bug Fixes
+
+* checks if the ChangeDetectorRef instance "destroyed" the flag before the call to avoid the exception ([1127926](https://github.com/primefaces/primeng/commit/1127926d199242561bae29041dc479dcc1550868))
+* corrected docs for p-table checkbox selection ([c9c16c2](https://github.com/primefaces/primeng/commit/c9c16c24fcd72eca48ae20b186eb30a44e719492))
+* TreeTable multi-sort functionality ([9e8d306](https://github.com/primefaces/primeng/commit/9e8d306c5252e1d459613e58ede145bac7383d10))
+* **calendar:** use ng-container instead of span ([a443831](https://github.com/primefaces/primeng/commit/a44383185e406e0b4fd79e03eb039b21acd87351))
+* **calender:** make button clickable on IE11 ([41c3348](https://github.com/primefaces/primeng/commit/41c3348363e76bb1792fc98a4ca02608f9d8a2f0))
+* **contextmenu:** fix self-closing contextmenu ([d0976a4](https://github.com/primefaces/primeng/commit/d0976a40de8426c3dc5cf8f21efd608878f55bc1))
+* **DataTable:** check all pages value null check ([36cd818](https://github.com/primefaces/primeng/commit/36cd8184fa527dc3c2423860bbcf81b6325d22c4)), closes [#2796](https://github.com/primefaces/primeng/issues/2796)
+* **DataTable:** Support comma fields in CSV export ([e4064a5](https://github.com/primefaces/primeng/commit/e4064a5fe791cb4dab34386af29d3d85606a6ef8)), closes [/tools.ietf.org/html/rfc4180#page-6](https://github.com/primefaces//tools.ietf.org/html/rfc4180/issues/page-6) [#2460](https://github.com/primefaces/primeng/issues/2460)
+* **editor:** Fix angular-universal build run error 'Element not found' ([f140cc3](https://github.com/primefaces/primeng/commit/f140cc3a78d63c49ee2945640bdeee9ba1e2a672))
+* **multi-select:** remove duplicate filter input. ([50afcbf](https://github.com/primefaces/primeng/commit/50afcbf3a81e99780a5eefe545de0f7974c2eee0))
+* **multiselect:** filter with virtualscroll enabled. ([f42969e](https://github.com/primefaces/primeng/commit/f42969e7360776ecbad7bc295494c3d10bb3df44))
+* **treetable:** Fix error on tab ([ff7a1b0](https://github.com/primefaces/primeng/commit/ff7a1b09c33851e7171b316a7c7b97066ad762bd))
+* Issue on Datatable with resize and reorder at same time [#868](https://github.com/primefaces/primeng/issues/868) ([63e8e63](https://github.com/primefaces/primeng/commit/63e8e632f4f5795f69d068b00a7ddfe04ab20d96))
+* styling ([33cf2b4](https://github.com/primefaces/primeng/commit/33cf2b4aa1bad89106abae080dd59ddb06767470))
+
 ## [11.2.0](https://github.com/primefaces/primeng/tree/11.2.0) (2021-01-21)
 
 [Full Changelog](https://github.com/primefaces/primeng/compare/11.1.0...11.2.0)
