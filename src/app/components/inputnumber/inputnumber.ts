@@ -1,5 +1,5 @@
 
-import {NgModule,Component,ChangeDetectionStrategy, Input, ElementRef, ViewChild, OnInit, EventEmitter, Output, forwardRef, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
+import {NgModule,Component,ChangeDetectionStrategy, Input, ElementRef, ViewChild, OnInit, EventEmitter, Output, forwardRef, ViewEncapsulation, ChangeDetectorRef, AfterViewInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {InputTextModule} from '@cyriacbr/primeng/inputtext';
 import { ButtonModule } from '@cyriacbr/primeng/button';
@@ -18,7 +18,7 @@ export const INPUTNUMBER_VALUE_ACCESSOR: any = {
                 [ngStyle]="style" [class]="styleClass">
             <input #input [ngClass]="'p-inputnumber-input'" [ngStyle]="inputStyle" [class]="inputStyleClass" pInputText [value]="formattedValue()" [attr.placeholder]="placeholder" [attr.title]="title" [attr.id]="inputId"
                 [attr.size]="size" [attr.name]="name" [attr.autocomplete]="autocomplete" [attr.maxlength]="maxlength" [attr.tabindex]="tabindex" [attr.aria-label]="ariaLabel"
-                [attr.aria-required]="ariaRequired" [disabled]="disabled" [attr.required]="required" [attr.aria-valumin]="min" [attr.aria-valuemax]="max"
+                [attr.aria-required]="ariaRequired" [disabled]="disabled" [attr.required]="required" [attr.aria-valumin]="min" [attr.aria-valuemax]="max"  [attr.autofocus]="autofocus"
                 (input)="onUserInput($event)" (keydown)="onInputKeyDown($event)" (keypress)="onInputKeyPress($event)" (paste)="onPaste($event)" (click)="onInputClick()"
                 (focus)="onInputFocus($event)" (blur)="onInputBlur($event)">
             <span class="p-inputnumber-button-group" *ngIf="showButtons && buttonLayout === 'stacked'">
@@ -42,7 +42,7 @@ export const INPUTNUMBER_VALUE_ACCESSOR: any = {
         '[class.p-inputwrapper-focus]': 'focused'
     }
 })
-export class InputNumber implements OnInit,ControlValueAccessor {
+export class InputNumber implements OnInit,ControlValueAccessor, AfterViewInit {
 
     @Input() showButtons: boolean = false;
 
@@ -95,8 +95,10 @@ export class InputNumber implements OnInit,ControlValueAccessor {
     @Input() inputStyle: any;
 
     @Input() inputStyleClass: string;
+    
+    @Input() autofocus: boolean;
 
-    @ViewChild('input') input: ElementRef;
+    @ViewChild('input') input: ElementRef<HTMLInputElement>;
 
     @Output() onInput: EventEmitter<any> = new EventEmitter();
 
@@ -261,7 +263,14 @@ export class InputNumber implements OnInit,ControlValueAccessor {
     ngOnInit() {
         this.constructParser();
 
+        this.focused = this.autofocus;
         this.initialized = true;
+    }
+
+    ngAfterViewInit() {
+        if (this.autofocus) {
+            this.input.nativeElement.focus();
+        }
     }
 
     getOptions() {
