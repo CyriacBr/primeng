@@ -2,9 +2,9 @@ import { TestBed, ComponentFixture, fakeAsync, tick } from '@angular/core/testin
 import { By } from '@angular/platform-browser';
 import { Calendar } from './calendar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonModule } from 'primeng/button';
+import { ButtonModule } from '@cyriacbr/primeng/button';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from 'primeng/api';
+import { SharedModule } from '@cyriacbr/primeng/api';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('Calendar', () => {

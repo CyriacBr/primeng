@@ -7,10 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { ButtonModule } from 'primeng/button';
-import { TooltipModule } from 'primeng/tooltip';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { InputSwitchModule } from 'primeng/inputswitch';
+import { ButtonModule } from '@cyriacbr/primeng/button';
+import { TooltipModule } from '@cyriacbr/primeng/tooltip';
+import { RadioButtonModule } from '@cyriacbr/primeng/radiobutton';
+import { InputSwitchModule } from '@cyriacbr/primeng/inputswitch';
 
 import { CarService } from './service/carservice';
 import { CountryService } from './service/countryservice';

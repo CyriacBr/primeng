@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ConfirmationService, MessageService} from 'primeng/api';
+import {ConfirmationService, MessageService} from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './confirmpopupdemo.html',

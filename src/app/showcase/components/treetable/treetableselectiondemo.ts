@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TreeNode } from 'primeng/api';
+import { TreeNode } from '@cyriacbr/primeng/api';
 import { NodeService } from '../../service/nodeservice';
-import { MessageService } from 'primeng/api';
+import { MessageService } from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './treetableselectiondemo.html',

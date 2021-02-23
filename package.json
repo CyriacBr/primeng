@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-lib": "ng build primeng-library && gulp build-assets",
-    "build:gulp": "gulp build-assets"
+    "build:gulp": "gulp build-assets",
+    "release": "cd ./dist && npm publish --access=public"
   },
   "repository": {
     "type": "git",

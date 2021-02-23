@@ -8,9 +8,9 @@ import {BarChartDemo} from './barchart/barchartdemo';
 import {LineChartDemo} from './linechart/linechartdemo';
 import {PolarAreaChartDemo} from './polarareachart/polarareachartdemo';
 import {RadarChartDemo} from './radarchart/radarchartdemo';
-import {ChartModule} from 'primeng/chart';
-import {ToastModule} from 'primeng/toast';
-import {TabViewModule} from 'primeng/tabview';
+import {ChartModule} from '@cyriacbr/primeng/chart';
+import {ToastModule} from '@cyriacbr/primeng/toast';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

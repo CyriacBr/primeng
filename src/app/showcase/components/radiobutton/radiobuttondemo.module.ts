@@ -3,8 +3,8 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {RadioButtonDemo} from './radiobuttondemo';
 import {RadioButtonDemoRoutingModule} from './radiobuttondemo-routing.module';
-import {RadioButtonModule} from 'primeng/radiobutton';
-import {TabViewModule} from 'primeng/tabview';
+import {RadioButtonModule} from '@cyriacbr/primeng/radiobutton';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
 import {AppInputStyleSwitchModule} from '../../app.inputstyleswitch.component';
 import {AppCodeModule} from '../../app.code.component';
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
-import { MenuItem, MessageService } from 'primeng/api';
+import { MenuItem, MessageService } from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './tablecontextmenudemo.html',

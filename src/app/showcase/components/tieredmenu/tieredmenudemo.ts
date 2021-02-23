@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import {MenuItem} from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './tieredmenudemo.html'

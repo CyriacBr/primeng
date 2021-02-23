@@ -5,22 +5,22 @@ import { FormsModule } from '@angular/forms';
 import { InvalidDemo } from './invaliddemo';
 import { InvalidDemoRoutingModule } from './invaliddemo-routing.module';
 
-import { ButtonModule } from 'primeng/button';
-import { PanelModule } from 'primeng/panel';
-import { TabViewModule } from 'primeng/tabview';
-import { InputTextModule } from 'primeng/inputtext';
-import { AutoCompleteModule } from 'primeng/autocomplete';
-import { CalendarModule } from 'primeng/calendar';
-import { ChipsModule } from 'primeng/chips';
-import { InputMaskModule } from 'primeng/inputmask';
-import { InputNumberModule } from 'primeng/inputnumber';
-import { DropdownModule } from 'primeng/dropdown';
-import { MultiSelectModule } from 'primeng/multiselect';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ButtonModule } from '@cyriacbr/primeng/button';
+import { PanelModule } from '@cyriacbr/primeng/panel';
+import { TabViewModule } from '@cyriacbr/primeng/tabview';
+import { InputTextModule } from '@cyriacbr/primeng/inputtext';
+import { AutoCompleteModule } from '@cyriacbr/primeng/autocomplete';
+import { CalendarModule } from '@cyriacbr/primeng/calendar';
+import { ChipsModule } from '@cyriacbr/primeng/chips';
+import { InputMaskModule } from '@cyriacbr/primeng/inputmask';
+import { InputNumberModule } from '@cyriacbr/primeng/inputnumber';
+import { DropdownModule } from '@cyriacbr/primeng/dropdown';
+import { MultiSelectModule } from '@cyriacbr/primeng/multiselect';
+import { InputTextareaModule } from '@cyriacbr/primeng/inputtextarea';
 
 import { AppCodeModule } from '../../app.code.component';
 import { AppInputStyleSwitchModule } from '../../app.inputstyleswitch.component';
-import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { CascadeSelectModule } from '@cyriacbr/primeng/cascadeselect';
 
 @NgModule({
 	imports: [

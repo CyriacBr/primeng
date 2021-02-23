@@ -1,6 +1,6 @@
 import { NgModule, Directive, ElementRef, HostListener, Input, forwardRef, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DomHandler } from 'primeng/dom';
+import { DomHandler } from '@cyriacbr/primeng/dom';
 import { Validator, AbstractControl, NG_VALIDATORS } from '@angular/forms';
 
 export const KEYFILTER_VALIDATOR: any = {

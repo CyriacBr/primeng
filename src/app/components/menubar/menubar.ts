@@ -1,9 +1,9 @@
 import { NgModule, Component, ElementRef, Input, Renderer2, OnDestroy,ChangeDetectorRef, ChangeDetectionStrategy, ViewEncapsulation, AfterContentInit, ContentChildren, QueryList, TemplateRef, ViewChild, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DomHandler } from 'primeng/dom';
-import { MenuItem, PrimeTemplate } from 'primeng/api';
+import { DomHandler } from '@cyriacbr/primeng/dom';
+import { MenuItem, PrimeTemplate } from '@cyriacbr/primeng/api';
 import { RouterModule } from '@angular/router';
-import { RippleModule } from 'primeng/ripple';  
+import { RippleModule } from '@cyriacbr/primeng/ripple';  
 
 @Component({
     selector: 'p-menubarSub',

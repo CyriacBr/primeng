@@ -1,8 +1,8 @@
 import {NgModule,Component,ElementRef,AfterViewChecked,OnDestroy,Input,Renderer2,Inject,forwardRef,ViewChild,Output,EventEmitter,ChangeDetectorRef,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng/dom';
-import {MenuItem} from 'primeng/api';
+import {DomHandler, ConnectedOverlayScrollHandler} from '@cyriacbr/primeng/dom';
+import {MenuItem} from '@cyriacbr/primeng/api';
 import {RouterModule} from '@angular/router';
 
 @Component({

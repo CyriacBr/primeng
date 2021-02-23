@@ -2,10 +2,10 @@ import {NgModule,Component,ElementRef,OnDestroy,Input,Output,EventEmitter,Render
     ContentChildren,QueryList,ViewChild,NgZone, ChangeDetectorRef,ViewRef,ChangeDetectionStrategy, ViewEncapsulation, AfterContentInit, TemplateRef, ContentChild} from '@angular/core';
 import {trigger,style,transition,animate, AnimationEvent, animation, useAnimation} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {DomHandler} from 'primeng/dom';
-import {Header,Footer,SharedModule, PrimeTemplate} from 'primeng/api';
-import {FocusTrapModule} from 'primeng/focustrap';
-import {RippleModule} from 'primeng/ripple';
+import {DomHandler} from '@cyriacbr/primeng/dom';
+import {Header,Footer,SharedModule, PrimeTemplate} from '@cyriacbr/primeng/api';
+import {FocusTrapModule} from '@cyriacbr/primeng/focustrap';
+import {RippleModule} from '@cyriacbr/primeng/ripple';
 
 let idx: number = 0;
 

@@ -3,8 +3,8 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {TriStateCheckboxDemo} from './tristatecheckboxdemo';
 import {TriStateCheckboxDemoRoutingModule} from './tristatecheckboxdemo-routing.module';
-import {TriStateCheckboxModule} from 'primeng/tristatecheckbox';
-import {TabViewModule} from 'primeng/tabview';
+import {TriStateCheckboxModule} from '@cyriacbr/primeng/tristatecheckbox';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
 import {AppInputStyleSwitchModule} from '../../app.inputstyleswitch.component';
 import {AppCodeModule} from '../../app.code.component';
 

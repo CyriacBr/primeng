@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Table } from 'primeng/table';
+import { Table } from '@cyriacbr/primeng/table';
 import { Customer, Representative } from '../../domain/customer';
 import { CustomerService } from '../../service/customerservice';
 

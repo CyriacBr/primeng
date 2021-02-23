@@ -30,8 +30,8 @@ npm install @angular/cdk --save
 
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;TreeModule&#125; from 'primeng/tree';
-import &#123;TreeNode&#125; from 'primeng/api';
+import &#123;TreeModule&#125; from '@cyriacbr/primeng/tree';
+import &#123;TreeNode&#125; from '@cyriacbr/primeng/api';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -466,7 +466,7 @@ export class TreeDemoComponent implements OnInit &#123;
             <p>Nodes can be reordered within a tree and also can be transferred between multiple trees. To enable dragging from a tree set <i>draggableNodes</i> to true and to allow
             dropping enable <i>droppableNodes</i> property. In addition, import TreeDragDropService and configure it as a provider at your component or module.</p>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;TreeDragDropService&#125; from 'primeng/api';
+import &#123;TreeDragDropService&#125; from '@cyriacbr/primeng/api';
 </app-code>
 
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
@@ -859,7 +859,7 @@ onDrop(event) &#123;
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 import &#123;Component,OnInit&#125; from '@angular/core';
 import &#123;NodeService&#125; from '../../service/nodeservice';
-import &#123;TreeNode&#125; from 'primeng/api';
+import &#123;TreeNode&#125; from '@cyriacbr/primeng/api';
 
 @Component(&#123;
     templateUrl: './treebasicdemo.html'

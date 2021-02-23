@@ -1,6 +1,6 @@
 import {Component,OnInit} from '@angular/core';
-import {MessageService} from 'primeng/api';
-import {MenuItem} from 'primeng/api';
+import {MessageService} from '@cyriacbr/primeng/api';
+import {MenuItem} from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './paneldemo.html',

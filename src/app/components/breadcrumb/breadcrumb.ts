@@ -1,6 +1,6 @@
 import {NgModule,Component,Input, Output, EventEmitter,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MenuItem} from 'primeng/api';
+import {MenuItem} from '@cyriacbr/primeng/api';
 import {RouterModule} from '@angular/router';
 
 @Component({

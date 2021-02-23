@@ -2,9 +2,9 @@ import {NgModule,Component,ElementRef,Input,Output,AfterContentInit,EventEmitter
         Inject,forwardRef,ContentChildren,QueryList,ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef, OnDestroy} from '@angular/core';
 import {trigger,state,style,transition,animate} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {SharedModule} from 'primeng/api';
-import {TreeNode} from 'primeng/api';
-import {PrimeTemplate} from 'primeng/api';
+import {SharedModule} from '@cyriacbr/primeng/api';
+import {TreeNode} from '@cyriacbr/primeng/api';
+import {PrimeTemplate} from '@cyriacbr/primeng/api';
 import { Subject, Subscription } from 'rxjs';
 
 @Component({

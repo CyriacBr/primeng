@@ -3,7 +3,7 @@ import { trigger,style,transition,animate,AnimationEvent, animation, useAnimatio
 import { DynamicDialogContent } from './dynamicdialogcontent';
 import { DynamicDialogConfig } from './dynamicdialog-config';
 import { CommonModule } from '@angular/common';
-import { DomHandler } from 'primeng/dom';
+import { DomHandler } from '@cyriacbr/primeng/dom';
 import { DynamicDialogRef } from './dynamicdialog-ref';
 
 const showAnimation = animation([

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer, Representative } from '../../domain/customer';
 import { CustomerService } from '../../service/customerservice';
-import { LazyLoadEvent } from 'primeng/api';
+import { LazyLoadEvent } from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './tablelazydemo.html'

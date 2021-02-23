@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {SelectItem} from 'primeng/api';
-import {SelectItemGroup} from 'primeng/api';
+import {SelectItem} from '@cyriacbr/primeng/api';
+import {SelectItemGroup} from '@cyriacbr/primeng/api';
 
 interface City {
     name: string,

@@ -3,9 +3,9 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {EditorDemo} from './editordemo';
 import {EditorDemoRoutingModule} from './editordemo-routing.module';
-import {EditorModule} from 'primeng/editor';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {EditorModule} from '@cyriacbr/primeng/editor';
+import {ButtonModule} from '@cyriacbr/primeng/button';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

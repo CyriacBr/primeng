@@ -1,8 +1,8 @@
 import {NgModule,Directive,Component,ElementRef,EventEmitter,AfterViewInit,Output,OnDestroy,Input,ChangeDetectionStrategy, ViewEncapsulation, ContentChildren, AfterContentInit, TemplateRef, QueryList} from '@angular/core';
-import {DomHandler} from 'primeng/dom';
+import {DomHandler} from '@cyriacbr/primeng/dom';
 import {CommonModule} from '@angular/common';
-import {RippleModule} from 'primeng/ripple'; 
-import {PrimeTemplate} from 'primeng/api'; 
+import {RippleModule} from '@cyriacbr/primeng/ripple'; 
+import {PrimeTemplate} from '@cyriacbr/primeng/api'; 
 
 @Directive({
     selector: '[pButton]'

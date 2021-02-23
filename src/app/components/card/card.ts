@@ -1,7 +1,7 @@
 import { NgModule, Component, Input, ElementRef, ContentChild, ChangeDetectionStrategy, ViewEncapsulation, TemplateRef, AfterContentInit, ContentChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule, Header, Footer, PrimeTemplate } from 'primeng/api';
-import { BlockableUI } from 'primeng/api';
+import { SharedModule, Header, Footer, PrimeTemplate } from '@cyriacbr/primeng/api';
+import { BlockableUI } from '@cyriacbr/primeng/api';
 
 @Component({
     selector: 'p-card',

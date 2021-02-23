@@ -1,11 +1,11 @@
 import {NgModule,Component,ElementRef,OnDestroy,Input,EventEmitter,Renderer2,ContentChild,NgZone,ViewChild,ChangeDetectorRef,ChangeDetectionStrategy, ViewEncapsulation, ContentChildren, QueryList, TemplateRef, AfterContentInit, Output} from '@angular/core';
 import {trigger,style,transition,animate,AnimationEvent, useAnimation, animation} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {DomHandler} from 'primeng/dom';
-import {Footer,SharedModule, PrimeTemplate, PrimeNGConfig, TranslationKeys, ConfirmEventType} from 'primeng/api';
-import {ButtonModule} from 'primeng/button';
-import {Confirmation} from 'primeng/api';
-import {ConfirmationService} from 'primeng/api';
+import {DomHandler} from '@cyriacbr/primeng/dom';
+import {Footer,SharedModule, PrimeTemplate, PrimeNGConfig, TranslationKeys, ConfirmEventType} from '@cyriacbr/primeng/api';
+import {ButtonModule} from '@cyriacbr/primeng/button';
+import {Confirmation} from '@cyriacbr/primeng/api';
+import {ConfirmationService} from '@cyriacbr/primeng/api';
 import {Subscription} from 'rxjs';
 
 const showAnimation = animation([

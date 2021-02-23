@@ -1,9 +1,9 @@
 import {NgModule,Component,Input,Output,OnDestroy,EventEmitter,Renderer2,ElementRef,ChangeDetectorRef,NgZone,
         ContentChildren,TemplateRef,AfterContentInit,QueryList,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng/dom';
-import {PrimeTemplate} from 'primeng/api';
-import {RippleModule} from 'primeng/ripple';
+import {DomHandler, ConnectedOverlayScrollHandler} from '@cyriacbr/primeng/dom';
+import {PrimeTemplate} from '@cyriacbr/primeng/api';
+import {RippleModule} from '@cyriacbr/primeng/ripple';
 import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/animations';
 
 @Component({

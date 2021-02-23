@@ -1,15 +1,15 @@
 import { NgModule, AfterContentInit, OnInit, OnDestroy, HostListener, Injectable, Directive, Component, Input, Output, EventEmitter, ContentChildren, TemplateRef, QueryList, ElementRef, NgZone, ViewChild, AfterViewInit, AfterViewChecked, OnChanges, SimpleChanges, ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TreeNode } from 'primeng/api';
+import { TreeNode } from '@cyriacbr/primeng/api';
 import { Subject, Subscription } from 'rxjs';
-import { DomHandler } from 'primeng/dom';
-import { PaginatorModule } from 'primeng/paginator';
-import { PrimeTemplate, SharedModule, FilterService } from 'primeng/api';
-import { SortMeta } from 'primeng/api';
-import { BlockableUI } from 'primeng/api';
-import { FilterMetadata } from 'primeng/api';
-import { ObjectUtils } from 'primeng/utils';
-import { RippleModule } from 'primeng/ripple';
+import { DomHandler } from '@cyriacbr/primeng/dom';
+import { PaginatorModule } from '@cyriacbr/primeng/paginator';
+import { PrimeTemplate, SharedModule, FilterService } from '@cyriacbr/primeng/api';
+import { SortMeta } from '@cyriacbr/primeng/api';
+import { BlockableUI } from '@cyriacbr/primeng/api';
+import { FilterMetadata } from '@cyriacbr/primeng/api';
+import { ObjectUtils } from '@cyriacbr/primeng/utils';
+import { RippleModule } from '@cyriacbr/primeng/ripple';
 import { ScrollingModule, CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 
 @Injectable()

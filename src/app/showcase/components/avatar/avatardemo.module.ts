@@ -2,13 +2,13 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AvatarDemo} from './avatardemo';
 import {AvatarDemoRoutingModule} from './avatardemo-routing.module';
-import {AccordionModule} from 'primeng/accordion';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
-import {ToastModule} from 'primeng/toast';
-import { AvatarModule } from 'primeng/avatar';
-import { AvatarGroupModule } from 'primeng/avatargroup';
-import { BadgeModule } from 'primeng/badge';
+import {AccordionModule} from '@cyriacbr/primeng/accordion';
+import {ButtonModule} from '@cyriacbr/primeng/button';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
+import {ToastModule} from '@cyriacbr/primeng/toast';
+import { AvatarModule } from '@cyriacbr/primeng/avatar';
+import { AvatarGroupModule } from '@cyriacbr/primeng/avatargroup';
+import { BadgeModule } from '@cyriacbr/primeng/badge';
 import { AppCodeModule } from '../../app.code.component';
 
 @NgModule({

@@ -3,15 +3,15 @@ import {NgModule,Component,Input,AfterContentInit,OnDestroy,Output,EventEmitter,
 import {CdkVirtualScrollViewport, ScrollingModule} from '@angular/cdk/scrolling';
 import {Optional} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {TreeNode} from 'primeng/api';
-import {SharedModule} from 'primeng/api';
-import {PrimeTemplate} from 'primeng/api';
-import {TreeDragDropService} from 'primeng/api';
+import {TreeNode} from '@cyriacbr/primeng/api';
+import {SharedModule} from '@cyriacbr/primeng/api';
+import {PrimeTemplate} from '@cyriacbr/primeng/api';
+import {TreeDragDropService} from '@cyriacbr/primeng/api';
 import {Subscription} from 'rxjs';
-import {BlockableUI} from 'primeng/api';
-import {ObjectUtils} from 'primeng/utils';
-import {DomHandler} from 'primeng/dom';
-import {RippleModule} from 'primeng/ripple';
+import {BlockableUI} from '@cyriacbr/primeng/api';
+import {ObjectUtils} from '@cyriacbr/primeng/utils';
+import {DomHandler} from '@cyriacbr/primeng/dom';
+import {RippleModule} from '@cyriacbr/primeng/ripple';
 
 @Component({
     selector: 'p-treeNode',

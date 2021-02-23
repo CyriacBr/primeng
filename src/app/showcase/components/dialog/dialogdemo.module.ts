@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DialogDemo} from './dialogdemo';
 import {DialogDemoRoutingModule} from './dialogdemo-routing.module';
-import {DialogModule} from 'primeng/dialog';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {DialogModule} from '@cyriacbr/primeng/dialog';
+import {ButtonModule} from '@cyriacbr/primeng/button';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

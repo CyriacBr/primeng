@@ -1,16 +1,16 @@
 {
-    "name": "primeng",
+    "name": "@cyriacbr/primeng",
     "version": "11.3.0-SNAPSHOT",
     "repository": {
       "type": "git",
-      "url": "https://github.com/primefaces/primeng"
+      "url": "https://github.com/CyriacBr/primeng"
     },
     "keywords": [
       "angular"
     ],
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/primefaces/primeng/issues"
+      "url": "https://github.com/CyriacBr/primeng/issues"
     },
     "module": "primeng.js",
     "typings": "primeng.d.ts",

@@ -1,5 +1,5 @@
 import {Component,OnInit} from '@angular/core';
-import {MessageService} from 'primeng/api';
+import {MessageService} from '@cyriacbr/primeng/api';
 
 declare var google: any;
 

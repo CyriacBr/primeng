@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FilterService, SelectItemGroup } from 'primeng/api';
+import { FilterService, SelectItemGroup } from '@cyriacbr/primeng/api';
 import { CountryService } from '../../service/countryservice';
 @Component({
     templateUrl: './autocompletedemo.html'

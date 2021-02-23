@@ -1,8 +1,8 @@
 import { NgModule,Component,ElementRef,AfterViewInit,OnDestroy,Input,Output,Renderer2,Inject,forwardRef,ViewChild,NgZone,EventEmitter,ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DomHandler } from 'primeng/dom';
-import { MenuItem, ContextMenuService } from 'primeng/api';
-import { RippleModule } from 'primeng/ripple';
+import { DomHandler } from '@cyriacbr/primeng/dom';
+import { MenuItem, ContextMenuService } from '@cyriacbr/primeng/api';
+import { RippleModule } from '@cyriacbr/primeng/ripple';
 import { RouterModule } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';

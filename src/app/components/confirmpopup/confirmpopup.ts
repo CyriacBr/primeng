@@ -1,10 +1,10 @@
 import {NgModule ,Component, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, ChangeDetectorRef, OnDestroy, Input, EventEmitter, Renderer2} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {Confirmation, ConfirmationService, PrimeNGConfig, TranslationKeys} from 'primeng/api';
+import {Confirmation, ConfirmationService, PrimeNGConfig, TranslationKeys} from '@cyriacbr/primeng/api';
 import {Subscription} from 'rxjs';
-import {ButtonModule} from 'primeng/button';
+import {ButtonModule} from '@cyriacbr/primeng/button';
 import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/animations';
-import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng/dom';
+import {DomHandler, ConnectedOverlayScrollHandler} from '@cyriacbr/primeng/dom';
 
 @Component({
     selector: 'p-confirmPopup',

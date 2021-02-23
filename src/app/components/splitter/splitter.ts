@@ -1,6 +1,6 @@
 import { NgModule, Component, ChangeDetectionStrategy, ViewEncapsulation, Input, ContentChildren, QueryList, ElementRef, ChangeDetectorRef, TemplateRef, ViewChild, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DomHandler } from 'primeng/dom';
+import { DomHandler } from '@cyriacbr/primeng/dom';
 
 @Component({
     selector: 'p-splitter',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
-import { SortEvent } from 'primeng/api';
+import { SortEvent } from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './tablesortdemo.html'

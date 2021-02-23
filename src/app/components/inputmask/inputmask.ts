@@ -27,8 +27,8 @@
 */
 import {NgModule,Component,ElementRef,OnInit,OnDestroy,Input,forwardRef,Output,EventEmitter,ViewChild,ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {DomHandler} from 'primeng/dom';
-import {InputTextModule} from 'primeng/inputtext';
+import {DomHandler} from '@cyriacbr/primeng/dom';
+import {InputTextModule} from '@cyriacbr/primeng/inputtext';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 
 export const INPUTMASK_VALUE_ACCESSOR: any = {

@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { AppConfigService } from './service/appconfigservice';
 import { AppConfig } from './domain/appconfig';
 import { Subscription } from 'rxjs';
-import { PrimeNGConfig } from 'primeng/api';
+import { PrimeNGConfig } from '@cyriacbr/primeng/api';
 
 declare let gtag: Function;
 

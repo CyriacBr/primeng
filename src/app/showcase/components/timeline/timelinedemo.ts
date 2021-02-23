@@ -1,5 +1,5 @@
 import {Component,OnInit} from '@angular/core';
-import {PrimeIcons} from 'primeng/api';
+import {PrimeIcons} from '@cyriacbr/primeng/api';
 
 @Component({
     templateUrl: './timelinedemo.html',

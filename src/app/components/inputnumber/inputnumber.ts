@@ -1,8 +1,8 @@
 
 import {NgModule,Component,ChangeDetectionStrategy, Input, ElementRef, ViewChild, OnInit, EventEmitter, Output, forwardRef, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {InputTextModule} from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
+import {InputTextModule} from '@cyriacbr/primeng/inputtext';
+import { ButtonModule } from '@cyriacbr/primeng/button';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 export const INPUTNUMBER_VALUE_ACCESSOR: any = {

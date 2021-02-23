@@ -11,12 +11,12 @@ import {TreeContextMenuDemo} from './treecontextmenudemo';
 import {TreeDragDropDemo} from './treedragdropdemo';
 import {TreeHorizontalDemo} from './treehorizontaldemo';
 import {TreeDemoRoutingModule} from './treedemo-routing.module';
-import {TreeModule} from 'primeng/tree';
-import {ToastModule} from 'primeng/toast';
-import {ButtonModule} from 'primeng/button';
-import {DialogModule} from 'primeng/dialog';
-import {ContextMenuModule} from 'primeng/contextmenu';
-import {TabViewModule} from 'primeng/tabview';
+import {TreeModule} from '@cyriacbr/primeng/tree';
+import {ToastModule} from '@cyriacbr/primeng/toast';
+import {ButtonModule} from '@cyriacbr/primeng/button';
+import {DialogModule} from '@cyriacbr/primeng/dialog';
+import {ContextMenuModule} from '@cyriacbr/primeng/contextmenu';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

@@ -1,10 +1,10 @@
 import { NgModule, Component, ElementRef, Input, Output, EventEmitter, AfterContentInit, ContentChildren, ContentChild, QueryList, TemplateRef,forwardRef, ChangeDetectorRef, ViewChild, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule, PrimeTemplate, Footer, Header, FilterService } from 'primeng/api';
-import { DomHandler } from 'primeng/dom';
-import { ObjectUtils } from 'primeng/utils';
+import { SharedModule, PrimeTemplate, Footer, Header, FilterService } from '@cyriacbr/primeng/api';
+import { DomHandler } from '@cyriacbr/primeng/dom';
+import { ObjectUtils } from '@cyriacbr/primeng/utils';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-import { RippleModule } from 'primeng/ripple';  
+import { RippleModule } from '@cyriacbr/primeng/ripple';  
 
 export const LISTBOX_VALUE_ACCESSOR: any = {
     provide: NG_VALUE_ACCESSOR,

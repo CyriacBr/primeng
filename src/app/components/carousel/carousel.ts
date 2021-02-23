@@ -1,8 +1,8 @@
 import { Component, Input, ElementRef, ViewChild, AfterContentInit, TemplateRef, ContentChildren, QueryList, NgModule, NgZone, EventEmitter, Output, ContentChild, ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef, SimpleChanges } from '@angular/core';
-import { PrimeTemplate, SharedModule, Header, Footer } from 'primeng/api';
-import { RippleModule } from 'primeng/ripple';  
+import { PrimeTemplate, SharedModule, Header, Footer } from '@cyriacbr/primeng/api';
+import { RippleModule } from '@cyriacbr/primeng/ripple';  
 import { CommonModule } from '@angular/common';
-import { UniqueComponentId } from 'primeng/utils';
+import { UniqueComponentId } from '@cyriacbr/primeng/utils';
 
 @Component({
 	selector: 'p-carousel',

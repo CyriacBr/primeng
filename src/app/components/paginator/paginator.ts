@@ -1,10 +1,10 @@
 import {NgModule,Component,OnInit,Input,Output,ChangeDetectorRef,EventEmitter,TemplateRef,OnChanges,SimpleChanges,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {DropdownModule} from 'primeng/dropdown';
-import {SelectItem} from 'primeng/api';
-import {RippleModule} from 'primeng/ripple';
-import {SharedModule} from 'primeng/api';
+import {DropdownModule} from '@cyriacbr/primeng/dropdown';
+import {SelectItem} from '@cyriacbr/primeng/api';
+import {RippleModule} from '@cyriacbr/primeng/ripple';
+import {SharedModule} from '@cyriacbr/primeng/api';
 
 @Component({
     selector: 'p-paginator',

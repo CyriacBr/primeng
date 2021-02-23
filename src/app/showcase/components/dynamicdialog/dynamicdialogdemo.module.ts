@@ -4,10 +4,10 @@ import {DynamicDialogModule} from '../../../components/dynamicdialog/dynamicdial
 import {ProductListDemo} from './productlistdemo';
 import {DynamicDialogDemo} from './dynamicdialogdemo';
 import {DynamicDialogDemoRoutingModule} from './dynamicdialogdemo-routing.module';
-import {ToastModule} from 'primeng/toast';
-import {TableModule} from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {ToastModule} from '@cyriacbr/primeng/toast';
+import {TableModule} from '@cyriacbr/primeng/table';
+import {ButtonModule} from '@cyriacbr/primeng/button';
+import {TabViewModule} from '@cyriacbr/primeng/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({
