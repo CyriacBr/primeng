@@ -58,6 +58,9 @@ export const AUTOCOMPLETE_VALUE_ACCESSOR: any = {
                             <span *ngIf="!itemTemplate">{{resolveFieldData(option)}}</span>
                             <ng-container *ngTemplateOutlet="itemTemplate; context: {$implicit: option, index: idx}"></ng-container>
                         </li>
+                        <li *ngIf="maxVisibleItems && ((suggestionsMaxLength - maxVisibleItems) > 0)" class="p-autocomplete-emptymessage p-autocomplete-item">
+                            {{(maxVisibleItemsMessage || '...and $1 other items').replace('$1', suggestionsMaxLength - maxVisibleItems)}}
+                        </li>
                         <li *ngIf="noResults && emptyMessage" class="p-autocomplete-emptymessage p-autocomplete-item">{{emptyMessage}}</li>
                     </ng-template>
                 </ul>
@@ -192,6 +195,10 @@ export class AutoComplete implements AfterViewChecked,AfterContentInit,OnDestroy
 
     @Input() optionGroupLabel: string;
 
+    @Input() maxVisibleItems: number;
+
+    @Input() maxVisibleItemsMessage: string;
+
     @ViewChild('container') containerEL: ElementRef;
 
     @ViewChild('in') inputEL: ElementRef;
@@ -258,6 +265,8 @@ export class AutoComplete implements AfterViewChecked,AfterContentInit,OnDestroy
 
     itemClicked: boolean;
 
+    suggestionsMaxLength = 0;
+
     constructor(public el: ElementRef, public renderer: Renderer2, public cd: ChangeDetectorRef, public differs: IterableDiffers) {
         this.differ = differs.find([]).create(null);
         this.listId = UniqueComponentId() + '_list';
@@ -268,7 +277,8 @@ export class AutoComplete implements AfterViewChecked,AfterContentInit,OnDestroy
     }
 
     set suggestions(val:any[]) {
-        this._suggestions = val;
+        this.suggestionsMaxLength = val.length;
+        this._suggestions = this.maxVisibleItems ? val.slice(0, this.maxVisibleItems) : val;
         this.handleSuggestionsChange();
     }
 
