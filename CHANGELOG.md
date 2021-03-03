@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.4.0](https://github.com/primefaces/primeng/compare/v11.3.0...v11.4.0) (2021-03-03)
+
+
+### Features
+
+* **autocomplete:** add maxVisibleItems ([c7c460b](https://github.com/primefaces/primeng/commit/c7c460be6ee4afa30b9bc79deb225f26992e4456))
+
 ## [11.3.0](https://github.com/primefaces/primeng/compare/v1.0.0-beta.20...v11.3.0) (2021-02-23)
 
 
